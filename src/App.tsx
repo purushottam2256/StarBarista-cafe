@@ -17,7 +17,7 @@ import './App.css';
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <Router basename="/">
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/menu" element={<Menu />} />
