@@ -61,7 +61,7 @@ A modern web application for cafe management with real-time inventory tracking, 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/purushottam2256/barista-cafe.git
+git clone https://github.com/purushottam2256/StarBarista-cafe.git
 cd barista-cafe
 ```
 
@@ -92,7 +92,6 @@ yarn dev
 The application uses the following tables in Supabase:
 
 - **orders** - Stores customer orders
-- **inventory** - Tracks available items and quantities
 - **menu** - Defines the cafe menu structure
 - **sales** - Records completed transactions
 
@@ -130,20 +129,16 @@ barista-cafe/
 ## Development
 
 ### Adding New Menu Items
-1. Update the `menuData.ts` file to include new items
-2. Add appropriate images to the `public/food-images` directory
-3. Update the item map in `RecommendedItems.tsx` if needed
+1. Add appropriate images to the `public/food-images` directory
+2. Update the item map in `RecommendedItems.tsx` if needed
 
 ### Customizing the Theme
 The application uses TailwindCSS for styling. You can modify the theme in `tailwind.config.ts`.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed
 
-## Contributors
-
-- Your Name - Initial work and development
 
 ---
 
