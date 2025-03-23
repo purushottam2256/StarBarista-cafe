@@ -1,11 +1,12 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://*.vercel.com https://*.vercel.sh; object-src 'none'; base-uri 'self'"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
@@ -13,10 +14,9 @@
       ]
     }
   ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "trailingSlash": false
 }
