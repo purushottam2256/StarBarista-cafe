@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    { "source": "/payment", "destination": "/index.html" },
-    { "source": "/bill", "destination": "/index.html" },
-    { "source": "/waiting", "destination": "/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
