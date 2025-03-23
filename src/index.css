@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 30% 97%;
+    --foreground: 30 20% 15%;
+
+    --card: 36 25% 97%;
+    --card-foreground: 30 20% 15%;
+
+    --popover: 36 25% 97%;
+    --popover-foreground: 30 20% 15%;
+
+    --primary: 18 50% 57%;
+    --primary-foreground: 36 25% 97%;
+
+    --secondary: 30 20% 90%;
+    --secondary-foreground: 30 20% 15%;
+
+    --muted: 30 20% 90%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 12 63% 54%;
+    --accent-foreground: 36 25% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 87%;
+    --input: 30 20% 87%;
+    --ring: 18 50% 57%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 36 25% 97%;
+
+    --card: 20 14% 8%;
+    --card-foreground: 36 25% 97%;
+
+    --popover: 20 14% 8%;
+    --popover-foreground: 36 25% 97%;
+
+    --primary: 18 50% 57%;
+    --primary-foreground: 36 25% 97%;
+
+    --secondary: 20 14% 12%;
+    --secondary-foreground: 36 25% 97%;
+
+    --muted: 20 14% 12%;
+    --muted-foreground: 30 10% 70%;
+
+    --accent: 12 63% 54%;
+    --accent-foreground: 36 25% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 14% 14%;
+    --input: 20 14% 14%;
+    --ring: 18 50% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cafe-bg text-cafe-text font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.cafe-card {
+  @apply relative overflow-hidden rounded-xl backdrop-blur-md bg-white/70 border border-white/20 shadow-lg;
+}
+
+.menu-card {
+  @apply relative overflow-hidden rounded-xl backdrop-blur-md bg-white/80 border border-white/20 shadow-md transition-all duration-300 hover:shadow-lg;
+}
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/80 border border-white/20;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-cafe-dark to-cafe-accent bg-clip-text text-transparent;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+}
+
+.coffee-pattern {
+  background-color: #FAF8F4;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23C97E5A' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
