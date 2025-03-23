@@ -217,7 +217,7 @@ const Payment = () => {
               <div className="relative mx-auto h-52 w-52">
                 {/* Static QR code image */}
                 <img
-                  src="./logos/scanner.png"
+                  src="/logos/scanner.png"
                   alt="Payment QR Code"
                   className="h-full w-full object-contain"
                 />
